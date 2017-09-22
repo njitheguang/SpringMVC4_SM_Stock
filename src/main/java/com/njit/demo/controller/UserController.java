@@ -25,6 +25,7 @@ public class UserController {
 		user.setPassword(password);
 		List<User> userList = userService.selectUser(user);
 		request.setAttribute("message", "µÇÂ¼");
+		System.out.println("HelloWorld");
 		if (userList.size() > 0) {
 			request.setAttribute("userList", userList);
 			return new ModelAndView("success");
